@@ -33,7 +33,7 @@ jobs:
       with:
         root_path: ${{ github.workspace }}
         install_path: ${{ github.workspace }}/build
-        api_key: ${{ secrets.APICOV_KEY_LIBBASE }}
+        api_key: ${{ secrets.APICOV_KEY }}
         compile: gcc
         api_source: headers
         headers_dir: ${{ github.workspace }}/include
