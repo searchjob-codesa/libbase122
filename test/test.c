@@ -346,7 +346,7 @@ static byte *read_file(const char *path, size_t *len) {
   size_t capacity = 1024;
   byte *data = malloc(capacity);
   size_t offset = 0;
-  int fd;
+  int fd = -1;
   int err = portable_open(path, O_RDONLY, &fd);
   ASSERT(0 == err, "error in open: %s", pstrerror(err));
   SSIZE_T got;
